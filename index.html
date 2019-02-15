@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<title>Steam Library | Johny W. Alves</title>
-	<script type="text/javascript" src="vendor/jquery.min.js"></script>
-	<link href="steamlibrary.min.css" rel="stylesheet" />
-</head>
-
-<body>
-	<div id='library_head'>
-		<div class='user_data'>
-			<div class="lib"><a href="/" class="logo">Steam Library</a></div><a href='https://steamcommunity.com/id/mougevit'
-			 target='_blank'> <img class="sign" src='https://steamsignature.com/status/brazilian/76561198010203851.png' /></a>
-		</div>
-		<div id='library_search' style='display: none'></div>
-	</div>
-	</div>
-	<div id="inner"></div>
-	<div id="bottom">
-		<a href="http://steampowered.com" target='_blank'><strong>Powered by Steam</strong></a>
-	</div>
-</body>
-<script type="text/javascript" src="steamlibrary.min.js"></script>
-<script type="text/javascript" src="modernizr.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(function () {
+<!DOCTYPE html><html lang="en"><head><title>Steam Library | Johny W. Alves</title><script type="text/javascript" src="vendor/jquery.min.js"></script><link href="steamlibrary.min.css" rel="stylesheet"></head><body><div id="library_head"><div class="user_data"><div class="lib"><a href="/" class="logo">Steam Library</a></div><a href="https://steamcommunity.com/id/mougevit" target="_blank"><img class="sign" src="https://steamsignature.com/status/brazilian/76561198010203851.png"></a></div><div id="library_search" style="display: none"></div></div><div id="inner"></div><div id="bottom"><a href="http://steampowered.com" target="_blank"><strong>Powered by Steam</strong></a></div></body><script type="text/javascript" src="steamlibrary.min.js"></script><script type="text/javascript" src="modernizr.min.js"></script><script type="text/javascript">$(document).ready(function () {
 		show_library();
 		position_size();
 		$(window).resize(function () {
@@ -58,7 +32,4 @@
 						});
 				return (computedStyle === val);
 			});
-	})(window);
-</script>
-
-</html>
+	})(window);</script></html>
