@@ -1,0 +1,25 @@
+{
+  "name": "steamlibrary",
+  "version": "1.0.0",
+  "description": "Steam Library",
+  "main": "",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "2.24.7",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "3.10.0",
+    "gulp-rename": "1.4.0",
+    "gulp-json-minify": "^1.2.2",
+    "gulp-uglify": "3.0.1",
+    "gulp-htmlmin": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnywalves/steamlibrary.git"
+  },
+  "author": "Johny W. Alves",
+  "license": "ISC"
+}

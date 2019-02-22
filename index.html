@@ -28,37 +28,29 @@
 		show_library();
 		position_size();
 		$(window).resize(function () {
-			position_size();
-		});
-	});
-	;
+			position_size()
+		})
+	})
 	(function (window) {
-		'use strict';
-		let document = window.document, Modernizr = window.Modernizr;
+		'use strict'
+		let document = window.document, Modernizr = window.Modernizr
 		Modernizr.addTest(
 			'csstransformspreserve3d',
 			function () {
-				var prop = Modernizr.prefixed('transformStyle');
-				var val = 'preserve-3d';
-				var computedStyle;
+				var prop = Modernizr.prefixed('transformStyle')
+				var val = 'preserve-3d'
+				var computedStyle
 				if (!prop)
-					return false;
-				prop = prop.replace(/([A-Z])/g, function (str, m1) {
-					return '-' + m1.toLowerCase();
-				}).replace(/^ms-/, '-ms-');
+					return false
+				prop = prop.replace(/([A-Z])/g, function (str, m1) { return '-' + m1.toLowerCase(); }).replace(/^ms-/, '-ms-')
 				Modernizr
-					.testStyles(
-						'#modernizr{' + prop + ':' + val
-						+ ';}',
+					.testStyles('#modernizr{' + prop + ':' + val + ';}',
 						function (el, rule) {
-							computedStyle = window.getComputedStyle ? getComputedStyle(
-								el, null)
-								.getPropertyValue(prop)
-								: '';
-						});
-				return (computedStyle === val);
-			});
-	})(window);
+							computedStyle = window.getComputedStyle ? getComputedStyle(el, null).getPropertyValue(prop): ''
+						})
+				return (computedStyle === val)
+			})
+	})(window)
 </script>
 
 </html>
