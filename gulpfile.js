@@ -1,7 +1,7 @@
 var gulp = require('gulp')
 var cleanCSS = require('gulp-clean-css')
 var jsonMinify = require('gulp-json-minify')
-var htmlmin = require('gulp-htmlmin')
+//var htmlmin = require('gulp-htmlmin')
 var rename = require("gulp-rename")
 var uglify = require('gulp-uglify')
 var pkg = require('./package.json')
@@ -80,9 +80,7 @@ gulp.task('default', ['json', 'css', 'js'])
 // Configure the browserSync task
 gulp.task('browserSync', function() {
   browserSync.init({
-    server: {
-      baseDir: "./docs"
-    }
+    server: { baseDir: "." }
   })
 })
 
