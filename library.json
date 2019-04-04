@@ -1,6 +1,6 @@
 {
    "response":{
-      "game_count":935,
+      "game_count":936,
       "games":[
          {
             "appid":10,
@@ -460,10 +460,18 @@
          },
          {
             "appid":8980,
-            "name":"Borderlands",
+            "name":"Borderlands GOTY",
             "playtime_forever":2663,
             "img_icon_url":"eb45fb32b7f4e75564a30a52aa3c35a191253ea0",
             "img_logo_url":"88ec298ff1ff0d748df39e084892aed6e919b146",
+            "has_community_visible_stats":true
+         },
+         {
+            "appid":729040,
+            "name":"Borderlands GOTY Enhanced",
+            "playtime_forever":0,
+            "img_icon_url":"aba56aae141ef1495cef3534163beb1664b417c0",
+            "img_logo_url":"192e944a32f052d5369e839a9c7bf6c8799292e2",
             "has_community_visible_stats":true
          },
          {
@@ -2444,7 +2452,8 @@
          {
             "appid":204300,
             "name":"Awesomenauts",
-            "playtime_forever":1813,
+            "playtime_2weeks":6,
+            "playtime_forever":1819,
             "img_icon_url":"4996933171d0804bd0ceb7b9a0e224b3139d18ba",
             "img_logo_url":"2d92dc3a4b10e3e66340ebe53266b901e25ee52f",
             "has_community_visible_stats":true
@@ -3260,7 +3269,8 @@
          {
             "appid":238960,
             "name":"Path of Exile",
-            "playtime_forever":0,
+            "playtime_2weeks":310,
+            "playtime_forever":310,
             "img_icon_url":"1110764aac57ac28d7ffd8c43071c75d5482a9c9",
             "img_logo_url":"0e7e54e889270b8df2ad90389dc1599c11fb9546",
             "has_community_visible_stats":true
@@ -3340,7 +3350,6 @@
          {
             "appid":233150,
             "name":"LUFTRAUSERS",
-            "playtime_2weeks":3,
             "playtime_forever":438,
             "img_icon_url":"bcf78988270db7bbac1a9622defc770b96e84702",
             "img_logo_url":"f736d12763688ee2af2ef5e0fd382c83c6fc889a",
@@ -5028,7 +5037,8 @@
          {
             "appid":221380,
             "name":"Age of Empires II: HD Edition",
-            "playtime_forever":122,
+            "playtime_2weeks":365,
+            "playtime_forever":488,
             "img_icon_url":"109c74df17f9b67ea47d8f01e3d1ec25278b9f73",
             "img_logo_url":"37e9da3f1174891fe38f8fb0206acda8b6bfc729",
             "has_community_visible_stats":true
@@ -7188,6 +7198,7 @@
          {
             "appid":458710,
             "name":"Kingdom Rush Frontiers",
+            "playtime_2weeks":1,
             "playtime_forever":1,
             "img_icon_url":"5830f91eb62be434e08f053b59bbfa95f0e53424",
             "img_logo_url":"b01728959898a7203c30a304df6c3771d7521316",
@@ -7300,8 +7311,8 @@
          {
             "appid":590380,
             "name":"Into the Breach",
-            "playtime_2weeks":103,
-            "playtime_forever":103,
+            "playtime_2weeks":66,
+            "playtime_forever":138,
             "img_icon_url":"0539a82edc8163180b672bf9e073d53687ab3cad",
             "img_logo_url":"4d5cc98fc191ae26c438f4eb5a6af38ff5e19600",
             "has_community_visible_stats":true
@@ -7309,7 +7320,6 @@
          {
             "appid":607050,
             "name":"Wargroove",
-            "playtime_2weeks":78,
             "playtime_forever":1056,
             "img_icon_url":"5d9f9be7eea6816578e46f07629a4dae8cec3b59",
             "img_logo_url":"2cb0e85f4c3bc23197c91e7e8540e29bd9312d45",
@@ -7390,7 +7400,8 @@
          {
             "appid":816340,
             "name":"Kingdom Rush Origins",
-            "playtime_forever":380,
+            "playtime_2weeks":9,
+            "playtime_forever":390,
             "img_icon_url":"e25b57417e1d0b8f5ee41959254bd4f4ec14f017",
             "img_logo_url":"d464eaa02d1896a8ea3ec55cc1650c436562b6ce",
             "has_community_visible_stats":true
