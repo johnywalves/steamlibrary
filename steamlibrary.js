@@ -10,6 +10,7 @@ function get_http(url, callback) {
 		}
 	}
 	http.open('GET', url, true)
+	//http.setRequestHeader('Access-Control-Allow-Origin', 'https://api.steampowered.com')	
 	http.send(null)
 }
 
@@ -31,6 +32,7 @@ function show_library() {
 	div_library.append("<div id='library_list'><div id='library_list_loading'><img src='http://cdn.steamcommunity.com/public/images/login/throbber.gif'/>Loading</div></div>")
 
 	get_http("./library.min.json", function (txt) {
+	//get_http("https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=77FD4D491702D42246D55FC2931F367A&steamid=76561198010203851&include_appinfo=1&include_played_free_games=1&format=json", function (txt) {
 		var data = JSON.parse(txt)
 		if (data.response && Object.keys(data.response).length > 0) {
 			library_all_games = data.response.games

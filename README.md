@@ -16,6 +16,14 @@ Instalação dos pacotes do package.json
 npm i
 ````
 
+## Browser Sync
+
+Em desenvolvimento 
+
+```shell
+gulp dev
+````
+
 ## Build
 
 Gerar os arquivos reduzidos 

@@ -1,93 +1,80 @@
-var gulp = require('gulp')
-var cleanCSS = require('gulp-clean-css')
-var jsonMinify = require('gulp-json-minify')
-//var htmlmin = require('gulp-htmlmin')
-var rename = require("gulp-rename")
-var uglify = require('gulp-uglify')
-var pkg = require('./package.json')
-var browserSync = require('browser-sync').create()
+const gulp = require('gulp')
+const cleanCSS = require('gulp-clean-css')
+const jsonMinify = require('gulp-json-minify')
+const rename = require("gulp-rename")
+const uglify = require('gulp-uglify')
+
+const browserSync = require('browser-sync').create()
 
 // Minify JSON
-gulp.task('json:minify', function() {
+function json_minify() {
   return gulp.src([
-      './*.json',
-      '!./*.min.json',	  
-	  '!./package*.json'
-    ])
+    './*.json',
+    '!./*.min.json',
+    '!./package*.json'
+  ])
     .pipe(jsonMinify())
     .pipe(rename({
       suffix: '.min'
     }))
     .pipe(gulp.dest('.'))
-    .pipe(browserSync.stream())
-})
+    .pipe(browserSync.stream());
+}
 
 // JSON
-gulp.task('json', ['json:minify']);
+const json = gulp.series(json_minify);
 
 // Minify CSS
-gulp.task('css:minify', function() {
+function css_minify() {
   return gulp.src([
-      './*.css',
-      '!./*.min.css'
-    ])
-    .pipe(cleanCSS())    
-	.pipe(rename({
+    './*.css',
+    '!./*.min.css'
+  ])
+    .pipe(cleanCSS())
+    .pipe(rename({
       suffix: '.min'
     }))
     .pipe(gulp.dest('.'))
-    .pipe(browserSync.stream())
-})
+    .pipe(browserSync.stream());
+}
 
 // CSS
-gulp.task('css', ['css:minify']);
+const css = gulp.series(css_minify);
 
 // Minify JavaScript
-gulp.task('js:minify', function() {
+function js_minify() {
   return gulp.src([
-      './*.js',
-      '!./*.min.js',
-	  '!./gulpfile.js'
-    ])
+    './*.js',
+    '!./*.min.js',
+    '!./gulpfile.js'
+  ])
     .pipe(uglify())
     .pipe(rename({
       suffix: '.min'
     }))
     .pipe(gulp.dest('.'))
-    .pipe(browserSync.stream())
-});
+    .pipe(browserSync.stream());
+}
 
 // JS
-gulp.task('js', ['js:minify'])
-
-// Minify HTML
-/*gulp.task('html:minify', function() {
-  return gulp.src([
-      './*.html',
-      '!./index.html'
-    ])
-	.pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('.'))
-    .pipe(browserSync.stream())
-})
-
-// HTML
-gulp.task('html', ['html:minify'])*/
-
-// Default task
-gulp.task('default', ['json', 'css', 'js'])
+const js = gulp.series(js_minify);
 
 // Configure the browserSync task
-gulp.task('browserSync', function() {
+function browserSyncTask() {
   browserSync.init({
     server: { baseDir: "." }
   })
-})
+}
 
+// Watch
+gulp.watch(['./*.json', '!./*.min.json'], json);
+gulp.watch(['./*.css', '!./*.min.css'], css);
+gulp.watch(['./*.js', '!./*.min.js'], js);
+gulp.watch(['./*.min.css', './*.min.js', './*.min.json', './*.html'], browserSync.reload);
+
+// Default task
+exports.default = gulp.series(json, css, js);
 // Dev task
-gulp.task('dev', ['css', 'js', 'json', 'browserSync'], function() {
-  gulp.watch('./*.css', ['css']);
-  gulp.watch('./*.js', ['js'])
-  gulp.watch('./*.json', ['json'])
-  gulp.watch('./*.html', browserSync.reload)
-})
+exports.dev = gulp.series(browserSyncTask);
+
+
