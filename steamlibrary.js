@@ -8,7 +8,7 @@ function show_library() {
     div_library.append("<div id='library_list_loading'><img src='http://cdn.steamcommunity.com/public/images/login/throbber.gif'/>Loading</div>");
 
     get_http("./library.min.json", function (txt) {
-        //get_http("https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=77FD4D491702D42246D55FC2931F367A&steamid=76561198010203851&include_appinfo=1&include_played_free_games=1&format=json", function(txt) {
+    //get_http("https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=77FD4D491702D42246D55FC2931F367A&steamid=76561198010203851&include_appinfo=1&include_played_free_games=1&format=json", function (txt) {
         var data = JSON.parse(txt);
         if (data.response && Object.keys(data.response).length > 0) {
             library_all_games = data.response.games;
@@ -31,13 +31,13 @@ function show_library() {
                             if ((obj.playtime_2weeks != null) || ((obj.playtime_forever != null) && (obj.playtime_forever != 0))) {
                                 app_html += "<br/>";
                                 if (obj.playtime_2weeks != null) {
-                                    app_html += (obj.playtime_2weeks / 60).toFixed(2) + " h recente";
+                                    app_html += (obj.playtime_2weeks / 60).toFixed(2) + " h in last 2 weeks";
                                 }
                                 if ((obj.playtime_2weeks != null) && (obj.playtime_forever != null)) {
                                     app_html += "<br/>";
                                 }
                                 if (obj.playtime_forever != null) {
-                                    app_html += (obj.playtime_forever / 60).toFixed(2) + " h total";
+                                    app_html += (obj.playtime_forever / 60).toFixed(2) + " h in total";
                                 }
                             }
                             app_html += "</p>";
@@ -91,7 +91,6 @@ function get_http(url, callback) {
         }
     }
     http.open('GET', url, true);
-    //http.setRequestHeader('Access-Control-Allow-Origin', 'https://api.steampowered.com')	
     http.send(null);
 }
 

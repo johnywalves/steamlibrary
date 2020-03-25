@@ -16,7 +16,7 @@ body {
 body {
     padding: 30px 45px;
     min-height: 100%;
-    background: #000 url("/img/blue_body_darker_repeat.jpg") center top repeat-y;
+    background: #000 url("img/blue_body_darker_repeat.jpg") center top repeat-y;
 }
 
 img {
