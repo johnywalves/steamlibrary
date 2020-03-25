@@ -1,220 +1,165 @@
+/* Reset CSS with few definitions */
 html {
     font-family: sans-serif, Arial, Helvetica;
     font-size: 12px;
     color: #000
 }
 
-html, body {
+html,
+body {
     border: 0;
     margin: 0;
     padding: 0;
-    min-height: 100%
+    min-height: 100%;
 }
 
 body {
+    padding: 30px 45px;
     min-height: 100%;
-    background: #000 url("img/blue_body_darker_repeat.jpg") center top repeat-y
+    background: #000 url("/img/blue_body_darker_repeat.jpg") center top repeat-y;
 }
 
 img {
-    border: 0
+    border: 0;
 }
 
 a {
     text-decoration: none;
-    color: #FFF
+    color: #FFF;
 }
 
 a:hover {
-    text-decoration: none
+    text-decoration: none;
 }
 
-ul, li {
-    border: 0;
-    margin: 0;
-    padding: 0
-}
-
-li {
-    float: left;
-    list-style: none
-}
-
-#light #header {
-    height: 45px;
-    background: rgba(0, 0, 0, 0)
-}
-
-#light #header a {
-    color: #FFF
-}
-
-#light #header .logo {
-    margin: 0 0 0 5px;
-    display: block
-}
-
-#light #header .logo img {
-    padding-top: 3px
-}
-
-#light #header .logo a {
-    position: absolute;
-    font-weight: 400
-}
-
-#inner {
-    padding-left: 10px
-}
-
-#inner li {
-    width: 100%
-}
-
-#inner a {
-    color: #1F7A1F;
-    font-weight: 700
-}
-
-#inner a:hover {
-    color: #0B280B
-}
-
-#inner .header a {
-    color: #4F4F4F
-}
-
-#lightbar {
-    display: none;
-    width: 100%;
-    position: fixed;
-    top: 0px;
-    background-color: #E3E3E3
-}
-
-@media(min-width: 992px) {
-    .csstransformspreserve3d .flip-container:hover .flipper, .flip-container.hover .flipper, #flip-toggle.flip .flipper {
-        -webkit-transform: rotateY(180deg);
-        -moz-transform: rotateY(180deg);
-    }
-}
-
-#head {
-    height: 45px
-}
-
+/* Head */
 #library_head {
-    display: block;
-    height: 45px
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#user_data p {
+    display: inline;
+    font-size: 30px;
+    font-weight: 700;
+    margin-right: 15px;
+    vertical-align: top;
 }
 
 #library_search {
-    float: right;
-    padding: 10px
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #library_search input {
     border: 2px solid #305D8A;
     padding: 5px;
     color: #FAFAFA;
-    background-color: #3D75AE
+    background-color: #3D75AE;
 }
 
 #library_search input::placeholder {
-    color: #BEBEBE
+    color: #BEBEBE;
 }
 
-.user_data {
-    float: left;
-    font-size: 25px
+/* Content */
+#library_list {
+    font-size: 12px;
+    width: 100%;
 }
 
-.user_data .sign {
-    position: absolute;
-    left: 260px;
-    top: 1px
+#library_list strong {
+    font-size: 14px;
 }
 
-.user_data .logo {
-    width: 250px
+#library_list p {
+    padding: 4px;
+    text-align: left;
 }
 
-.user_data .lib {
-    position: absolute;
-    top: 10px;
-    left: 65px
+#library_list ul {
+    text-align: center;
+    padding-inline-start: 0;
 }
 
-.user_data .logo img {
-    margin: 9px 0 0 10px
+#library_list li {
+    display: inline-block;
 }
 
+/* Elemento da lista */
 .library_app {
     display: block;
     width: 184px;
     height: 69px;
     margin: 4px;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .library_app img {
-    float: left
+    float: left;
 }
 
 .library_app p {
     float: left;
-    margin-top: 5px;
-    margin-left: 5px;
+    margin: 3px;
     color: #7B7B7B;
     width: 500px;
-    color: #FFF
+    color: #FFF;
 }
 
+/* Efeito de flip */
 .flip-container {
     -webkit-perspective: 1000;
     -moz-perspective: 1000;
+    perspective: 1000;
     -moz-transform: perspective(1000px);
-    -moz-transform-style: preserve-3d
+    transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
 .flip-container:hover .flipper .front {
-    z-index: -1000
+    z-index: -1000;
 }
 
-.flip-container, .front, .back {
+.flip-container,
+.front,
+.back {
     width: 100%;
     height: 0;
     padding-bottom: 67.6245211%;
-    margin-bottom: 30px
+    margin-bottom: 30px;
 }
 
 .flipper {
     -webkit-transition: 0.5s;
-    -webkit-transform-style: preserve-3d;
     -moz-transition: 0.5s;
-    -moz-transform-style: preserve-3d;
     transition: 0.5s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
-    position: relative
+    position: relative;
 }
 
-.front, .back {
+.front,
+.back {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
     top: 0;
-    left: 0
+    left: 0;
 }
 
 .front {
     background: transparent;
-    z-index: 2
+    z-index: 2;
 }
 
 .front img {
     border-radius: 6px;
-    width: 100% !important
+    width: 100% !important;
 }
 
 .back {
@@ -222,26 +167,35 @@ li {
     border-radius: 6px;
     padding: 0;
     height: 69px;
-    display: block
+    display: block;
 }
 
 .csstransformspreserve3d .back {
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
-    transform: rotateY(180deg)
+    transform: rotateY(180deg);
 }
 
-#inner {
-    margin: 0
+@media(min-width: 992px) {
+
+    .csstransformspreserve3d .flip-container:hover .flipper,
+    .flip-container.hover .flipper,
+    #flip-toggle.flip .flipper {
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        transform: rotateY(180deg);
+    }
 }
 
+/* Rodapé */
 #bottom {
     clear: both;
-    width: 100%
+    width: 100%;
 }
 
 #bottom a {
     float: right;
-    color: #7B7B7B;
-    margin: 5px
+    color: #d9d9d9;
+    font-size: 24px;
+    padding: 20px 5px 25px 5px;
 }

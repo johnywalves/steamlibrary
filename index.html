@@ -8,31 +8,25 @@
 </head>
 
 <body>
-	<div id='library_head'>
-		<div class='user_data'>
-			<div class="lib"><a href="/" class="logo">Steam Library</a></div><a
-				href='https://steamcommunity.com/id/mougevit' target='_blank'> <img class="sign"
-					src='https://steamsignature.com/status/brazilian/76561198010203851.png' /></a>
+	<div id="library_head">
+		<div id="user_data">
+			<p><a href="/" class="logo">Steam Library</a></p>
+			<a href="https://steamcommunity.com/id/mougevit" target="_blank">
+				<img class="sign" src="https://steamsignature.com/status/brazilian/76561198010203851.png" />
+			</a>
 		</div>
-		<div id='library_search' style='display: none'></div>
+		<div id="library_search" style="display: none"></div>
 	</div>
-	</div>
-	<div id="inner"></div>
+	<div id="library_list"></div>
 	<div id="bottom">
-		<a href="http://steampowered.com" target='_blank'><strong>Powered by Steam</strong></a>
+		<a href="http://steampowered.com" target="_blank"><strong>Powered by Steam</strong></a>
 	</div>
 </body>
+
 <script type="text/javascript" src="steamlibrary.min.js"></script>
 <script type="text/javascript" src="modernizr.min.js"></script>
 <script type="text/javascript">
-	$(document).ready(function () {
-		show_library();
-		position_size();
-		$(window).resize(function () {
-			position_size();
-		});
-	});
-	;
+	$(document).ready(show_library);
 	(function (window) {
 		'use strict';
 		let document = window.document, Modernizr = window.Modernizr;
@@ -42,21 +36,22 @@
 				var prop = Modernizr.prefixed('transformStyle');
 				var val = 'preserve-3d';
 				var computedStyle;
-				if (!prop)
+
+				if (!prop) {
 					return false;
+				}
+
 				prop = prop.replace(/([A-Z])/g, function (str, m1) {
 					return '-' + m1.toLowerCase();
 				}).replace(/^ms-/, '-ms-');
+
 				Modernizr
 					.testStyles(
-						'#modernizr{' + prop + ':' + val
-						+ ';}',
+						'#modernizr{' + prop + ':' + val + ';}',
 						function (el, rule) {
-							computedStyle = window.getComputedStyle ? getComputedStyle(
-								el, null)
-								.getPropertyValue(prop)
-								: '';
+							computedStyle = window.getComputedStyle ? getComputedStyle(el, null).getPropertyValue(prop) : '';
 						});
+
 				return (computedStyle === val);
 			});
 	})(window);

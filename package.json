@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "Steam Library",
   "main": "",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
-    "gulp-clean-css": "3.10.0",
+    "gulp-clean-css": "^4.3.0",
     "gulp-json-minify": "^1.2.2",
-    "gulp-rename": "1.4.0",
-    "gulp-uglify": "3.0.1"
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2"
   },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

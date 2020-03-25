@@ -4,30 +4,22 @@ Com a listagem da biblioteca da Steam API
 
 ## Instalação do Ambiente
 
-Instalar o Gulp globalmente 
+Instalar o Gulp globalmente `yarn global add gulp` ou `npm install gulp -g`
 
-```shell
-npm install gulp -g
-````
-
-Instalação dos pacotes do package.json
-
-```shell
-npm i
-````
+Instalação dos pacotes do package.json `yarn` ou `npm i`
 
 ## Browser Sync
 
-Em desenvolvimento 
+Em desenvolvimento
 
 ```shell
 gulp dev
-````
+```
 
 ## Build
 
-Gerar os arquivos reduzidos 
+Gerar os arquivos reduzidos
 
 ```shell
 gulp
-````
+```
