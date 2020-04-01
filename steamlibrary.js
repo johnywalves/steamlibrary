@@ -90,6 +90,8 @@ function get_http(url, callback) {
             callback(this.responseText);
         }
     }
+
+    http.setRequestHeader("Access-Control-Allow-Origin", "https://johnywalves.github.io");
     http.open('GET', url, true);
     http.send(null);
 }
