@@ -87,6 +87,17 @@ a:hover {
     display: inline-block;
 }
 
+/* Loading */
+#library_list_loading {
+    text-align: center;
+    margin: 5rem auto;
+}
+
+#library_list_loading p {
+    color: #BEBEBE;
+    text-align: center;
+}
+
 /* Elemento da lista */
 .library_app {
     display: block;
