@@ -91,8 +91,8 @@ function get_http(url, callback) {
         }
     }
 
-    http.setRequestHeader("Access-Control-Allow-Origin", "https://johnywalves.github.io");
     http.open('GET', url, true);
+    http.setRequestHeader("Access-Control-Allow-Origin", "https://johnywalves.github.io");
     http.send(null);
 }
 
