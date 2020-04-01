@@ -190,12 +190,15 @@ a:hover {
 /* Rodapé */
 #bottom {
     clear: both;
+}
+
+#bottom p {
+    text-align: center;
+    font-size: 16px;
+    color: #d9d9d9;
     width: 100%;
 }
 
 #bottom a {
-    float: right;
     color: #d9d9d9;
-    font-size: 24px;
-    padding: 20px 5px 25px 5px;
 }

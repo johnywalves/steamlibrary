@@ -19,14 +19,22 @@
 	</div>
 	<div id="library_list"></div>
 	<div id="bottom">
-		<a href="http://steampowered.com" target="_blank"><strong>Powered by Steam</strong></a>
+		<p>
+			©<span id='currentYear'></span> made by
+			<a href="https://www.johnywalves.com.br" target="_blank"><strong>Johny W. Alves</strong></a> with
+			<a href="https://steampowered.com" target="_blank"><strong>Powered by Steam</strong></a>
+		</p>
 	</div>
 </body>
 
 <script type="text/javascript" src="steamlibrary.min.js"></script>
 <script type="text/javascript" src="modernizr.min.js"></script>
-<script type="text/javascript">
-	$(document).ready(show_library);
+<script type="text/javascript"> 
+	$(document).ready(function () {
+		show_library();
+		document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+	});
+
 	(function (window) {
 		'use strict';
 		let document = window.document, Modernizr = window.Modernizr;

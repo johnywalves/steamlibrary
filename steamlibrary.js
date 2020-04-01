@@ -7,8 +7,8 @@ function show_library() {
     var div_library = $("#library_list");
     div_library.append("<div id='library_list_loading'><img src='http://cdn.steamcommunity.com/public/images/login/throbber.gif'/>Loading</div>");
 
-    get_http("./library.min.json", function (txt) {
-    //get_http("https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=77FD4D491702D42246D55FC2931F367A&steamid=76561198010203851&include_appinfo=1&include_played_free_games=1&format=json", function (txt) {
+    //get_http("./library.min.json", function (txt) {
+    get_http("https://api.steampowered.com/IPlayerService/GetOwnedGames/v0001/?key=FFF9ACD14A58B9AA9816E2B8AF72D517&steamid=76561198010203851&include_appinfo=1&include_played_free_games=1&format=json", function (txt) {
         var data = JSON.parse(txt);
         if (data.response && Object.keys(data.response).length > 0) {
             library_all_games = data.response.games;
