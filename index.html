@@ -29,7 +29,7 @@
 
 <script type="text/javascript" src="steamlibrary.min.js"></script>
 <script type="text/javascript" src="modernizr.min.js"></script>
-<script type="text/javascript"> 
+<script type="text/javascript">
 	$(document).ready(function () {
 		show_library();
 		document.getElementById("currentYear").innerHTML = new Date().getFullYear();
@@ -37,7 +37,7 @@
 
 	(function (window) {
 		'use strict';
-		let document = window.document, Modernizr = window.Modernizr;
+		var document = window.document, Modernizr = window.Modernizr;
 		Modernizr.addTest(
 			'csstransformspreserve3d',
 			function () {
@@ -49,9 +49,7 @@
 					return false;
 				}
 
-				prop = prop.replace(/([A-Z])/g, function (str, m1) {
-					return '-' + m1.toLowerCase();
-				}).replace(/^ms-/, '-ms-');
+				prop = prop.replace(/([A-Z])/g, function (str, m1) { return '-' + m1.toLowerCase(); }).replace(/^ms-/, '-ms-');
 
 				Modernizr
 					.testStyles(

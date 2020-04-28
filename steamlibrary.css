@@ -55,12 +55,14 @@ a:hover {
 #library_search input {
     border: 2px solid #305D8A;
     padding: 5px;
-    color: #FAFAFA;
+    color: #fcfcfc;
     background-color: #3D75AE;
+    border-radius: 5px;
+    width: 250px;
 }
 
 #library_search input::placeholder {
-    color: #BEBEBE;
+    color: #dedede;
 }
 
 /* Content */
