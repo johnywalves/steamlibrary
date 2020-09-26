@@ -23,7 +23,7 @@ function show_library() {
 
                             app_html += "<div class='flip-container'>";
                             app_html += "<div class='flipper'>";
-                            app_html += "<div class='front'><img src='http://media.steampowered.com/steamcommunity/public/images/apps/" + obj.appid + "/" + obj.img_logo_url + ".jpg' /></div>";
+                            app_html += "<div class='front'><img src='//media.steampowered.com/steamcommunity/public/images/apps/" + obj.appid + "/" + obj.img_logo_url + ".jpg' /></div>";
                             app_html += "<div class='back'>";
 
                             app_html += "<p class='app'>";
