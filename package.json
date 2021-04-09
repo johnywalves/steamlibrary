@@ -4,7 +4,7 @@
   "description": "Steam Library",
   "main": "",
   "dependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-json-minify": "^1.2.2",
