@@ -1,217 +1,227 @@
 /* Reset CSS with few definitions */
 html {
-    font-family: sans-serif, Arial, Helvetica;
-    font-size: 12px;
-    color: #000
+  font-family: sans-serif, Arial, Helvetica;
+  font-size: 12px;
+  color: #000;
 }
 
 html,
 body {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
 }
 
 body {
-    padding: 30px 45px;
-    min-height: 100%;
-    background: #000 url("img/blue_body_darker_repeat.jpg") center top repeat-y;
+  padding: 30px 45px;
+  min-height: 100%;
+  background: #000 url("img/blue_body_darker_repeat.jpg") center top repeat-y;
 }
 
 img {
-    border: 0;
+  border: 0;
 }
 
 a {
-    text-decoration: none;
-    color: #FFF;
+  text-decoration: none;
+  color: #fff;
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* Head */
 #library_head {
-    display: flex;
-    margin-bottom: 10px;
+  display: flex;
+  margin-bottom: 10px;
 }
 
 #user_data p {
-    display: inline;
-    font-size: 30px;
-    font-weight: 700;
-    margin-right: 15px;
-    vertical-align: top;
+  display: inline;
+  font-size: 30px;
+  font-weight: 700;
+  margin-right: 15px;
+  vertical-align: top;
 }
 
 #library_search {
-    margin-left: auto;
-    margin-top: auto;
-    margin-bottom: auto;
+  margin-left: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 #library_search input {
-    border: 2px solid #305D8A;
-    padding: 5px;
-    color: #fcfcfc;
-    background-color: #3D75AE;
-    border-radius: 5px;
-    width: 250px;
+  border: 2px solid #305d8a;
+  padding: 5px;
+  color: #fcfcfc;
+  background-color: #3d75ae;
+  border-radius: 5px;
+  width: 250px;
 }
 
 #library_search input::placeholder {
-    color: #dedede;
+  color: #dedede;
 }
 
 /* Content */
 #library_list {
-    font-size: 12px;
-    width: 100%;
-}
-
-#library_list strong {
-    font-size: 14px;
-}
-
-#library_list p {
-    padding: 4px;
-    text-align: left;
+  font-size: 12px;
+  width: 100%;
 }
 
 #library_list ul {
-    text-align: center;
-    padding-inline-start: 0;
+  text-align: center;
+  padding-inline-start: 0;
 }
 
 #library_list li {
-    display: inline-block;
+  display: inline-block;
 }
 
 /* Loading */
 #library_list_loading {
-    text-align: center;
-    margin: 5rem auto;
+  text-align: center;
+  margin: 5rem auto;
 }
 
 #library_list_loading p {
-    color: #BEBEBE;
-    text-align: center;
+  color: #bebebe;
+  text-align: center;
 }
 
 /* Elemento da lista */
 .library_app {
-    display: block;
-    width: 184px;
-    height: 69px;
-    margin: 4px;
-    overflow: hidden;
+  display: block;
+  width: 184px;
+  height: 69px;
+  margin: 4px;
+  overflow: hidden;
 }
 
 .library_app img {
-    float: left;
+  float: left;
 }
 
 .library_app p {
-    float: left;
-    margin: 3px;
-    color: #7B7B7B;
-    width: 500px;
-    color: #FFF;
+  float: left;
+  margin: 3px;
+  width: 500px;
+  color: #fff;
 }
 
 /* Efeito de flip */
 .flip-container {
-    -webkit-perspective: 1000;
-    -moz-perspective: 1000;
-    perspective: 1000;
-    -moz-transform: perspective(1000px);
-    transform: perspective(1000px);
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  perspective: 1000;
+  -moz-transform: perspective(1000px);
+  transform: perspective(1000px);
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 .flip-container:hover .flipper .front {
-    z-index: -1000;
+  z-index: -1000;
 }
 
 .flip-container,
 .front,
 .back {
-    width: 100%;
-    height: 0;
-    padding-bottom: 67.6245211%;
-    margin-bottom: 30px;
+  width: 100%;
+  height: 69px;
 }
 
 .flipper {
-    -webkit-transition: 0.5s;
-    -moz-transition: 0.5s;
-    transition: 0.5s;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    position: relative;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
 }
 
 .front,
 .back {
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .front {
-    background: transparent;
-    z-index: 2;
+  background: #305d8a80;
+  overflow: hidden;
+  border-radius: 6px;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .front img {
-    border-radius: 6px;
-    width: 100% !important;
+  object-fit: cover;
 }
 
 .back {
-    background: #1A1A1A;
-    border-radius: 6px;
-    padding: 0;
-    height: 69px;
-    display: block;
+  background: #1a1a1a;
+  border-radius: 6px;
+  padding: 0;
+  display: block;
+}
+
+.back h2,
+.back p {
+  width: 100%;
+  padding: 0 6px;
+  text-align: left;
+}
+
+.back h2 {
+  width: 100%;
+  font-size: 14px;
+  word-wrap: break-word;
+  text-align: left;
+  margin: 4px 0 2px;
 }
 
 .csstransformspreserve3d .back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+@media (min-width: 992px) {
+  .csstransformspreserve3d .flip-container:hover .flipper,
+  .flip-container.hover .flipper,
+  #flip-toggle.flip .flipper {
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
     transform: rotateY(180deg);
-}
-
-@media(min-width: 992px) {
-
-    .csstransformspreserve3d .flip-container:hover .flipper,
-    .flip-container.hover .flipper,
-    #flip-toggle.flip .flipper {
-        -webkit-transform: rotateY(180deg);
-        -moz-transform: rotateY(180deg);
-        transform: rotateY(180deg);
-    }
+  }
 }
 
 /* Rodapé */
-#bottom {
-    clear: both;
+footer {
+  clear: both;
 }
 
-#bottom p {
-    text-align: center;
-    font-size: 16px;
-    color: #d9d9d9;
-    width: 100%;
+footer p {
+  text-align: center;
+  font-size: 16px;
+  color: #d9d9d9;
+  width: 100%;
 }
 
-#bottom a {
-    color: #d9d9d9;
+footer span {
+  color: #e01324;
+}
+
+footer a {
+  color: #3d75ae;
 }
